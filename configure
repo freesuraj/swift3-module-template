@@ -1,6 +1,12 @@
 #!/usr/bin/ruby
 require 'fileutils'
 
+def getProjectName(default)
+  puts "Please Enter Project Name (default: \"#{default}\")"
+  answer = gets.chomp
+  answer.length > 0 ? answer : default
+end
+
 def prompt_for_variable(variable, default)
   puts "Please enter a value for #{variable} (default: \"#{default}\")"
   answer = gets.chomp
@@ -49,16 +55,19 @@ end
 
 substitutions = {
   '__PROJECT_NAME__' => 'MyProject',
-  '__ORGANIZATION NAME__' => 'Awesome Org',
-  'com.AN.ORGANIZATION.IDENTIFIER' => 'com.awesome',
-  '__AUTHOR NAME__' => 'Mr McAwesome',
-  '__TODAYS_DATE__' => 'Jan 32, 2032',
-  '__TODAYS_YEAR__' => '2032',
-  '__GITHUB_USERNAME__' => 'awesome_octocat'
+  '__ORGANIZATION NAME__' => 'PropertyGuru Pte Ltd',
+  'com.AN.ORGANIZATION.IDENTIFIER' => 'com.propertyguru',
+  '__AUTHOR NAME__' => 'Suraj Pathak',
+  '__TODAYS_DATE__' => Time.new.strftime("%b %d, %Y"),
+  '__TODAYS_YEAR__' => Time.new.strftime("%Y"),
+  '__GITHUB_USERNAME__' => 'freesuraj'
 }
-substitutions.each do |variable, default|
-  substitutions[variable] = prompt_for_variable(variable, default)
-end
+
+# substitutions.each do |variable, default|
+#   substitutions[variable] = prompt_for_variable(variable, default)
+# end
+
+substitutions['__PROJECT_NAME__'] = getProjectName('My Project')
 
 Dir.chdir File.dirname(__FILE__)
 FileUtils.mkdir_p 'OUTPUT'

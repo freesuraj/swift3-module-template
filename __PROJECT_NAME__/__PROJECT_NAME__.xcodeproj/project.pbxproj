@@ -10,8 +10,8 @@
 		D95E1BE71D88D63400F94976 /* __PROJECT_NAME__.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95E1BDD1D88D63300F94976 /* __PROJECT_NAME__.framework */; };
 		D95E1BEC1D88D63400F94976 /* __PROJECT_NAME__Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1BEB1D88D63400F94976 /* __PROJECT_NAME__Tests.swift */; };
 		D95E1BEE1D88D63400F94976 /* __PROJECT_NAME__.h in Headers */ = {isa = PBXBuildFile; fileRef = D95E1BE01D88D63300F94976 /* __PROJECT_NAME__.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D95E1BF91D88E01300F94976 /* wk.png in Resources */ = {isa = PBXBuildFile; fileRef = D95E1BF81D88E01300F94976 /* wk.png */; };
 		D95E1BFB1D88E2D500F94976 /* __PROJECT_NAME__.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1BFA1D88E2D500F94976 /* __PROJECT_NAME__.swift */; };
+		EDDF69B41D95048D00D6436A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDDF69B31D95048D00D6436A /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +31,8 @@
 		D95E1BE61D88D63400F94976 /* __PROJECT_NAME__Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = __PROJECT_NAME__Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95E1BEB1D88D63400F94976 /* __PROJECT_NAME__Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __PROJECT_NAME__Tests.swift; sourceTree = "<group>"; };
 		D95E1BED1D88D63400F94976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D95E1BF81D88E01300F94976 /* wk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wk.png; path = Resources/wk.png; sourceTree = SOURCE_ROOT; };
 		D95E1BFA1D88E2D500F94976 /* __PROJECT_NAME__.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = __PROJECT_NAME__.swift; sourceTree = "<group>"; };
+		EDDF69B31D95048D00D6436A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +76,7 @@
 		D95E1BDF1D88D63300F94976 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				D95E1BFA1D88E2D500F94976 /* __PROJECT_NAME__.swift */,
-				D95E1BE01D88D63300F94976 /* __PROJECT_NAME__.h */,
-				D95E1BE11D88D63300F94976 /* Info.plist */,
+				EDDF69B51D95049800D6436A /* Supporting Files */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -95,10 +93,20 @@
 		D95E1BF71D88DFFD00F94976 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D95E1BF81D88E01300F94976 /* wk.png */,
+				EDDF69B31D95048D00D6436A /* Assets.xcassets */,
 			);
 			name = Resources;
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		EDDF69B51D95049800D6436A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D95E1BFA1D88E2D500F94976 /* __PROJECT_NAME__.swift */,
+				D95E1BE01D88D63300F94976 /* __PROJECT_NAME__.h */,
+				D95E1BE11D88D63300F94976 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +176,7 @@
 					};
 					D95E1BE51D88D63400F94976 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = WZQCH4CE4Y;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -195,7 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D95E1BF91D88E01300F94976 /* wk.png in Resources */,
+				EDDF69B41D95048D00D6436A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +286,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -324,7 +333,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -347,7 +356,7 @@
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.AN.ORGANIZATION.IDENTIFIER.--PROJECT-NAME--";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AN.ORGANIZATION.IDENTIFIER.PROJECT-NAME";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -367,7 +376,7 @@
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.AN.ORGANIZATION.IDENTIFIER.--PROJECT-NAME--";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AN.ORGANIZATION.IDENTIFIER.PROJECT-NAME";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -378,7 +387,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = __PROJECT_NAME__Tests/Info.plist;
+				DEVELOPMENT_TEAM = WZQCH4CE4Y;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AN.ORGANIZATION.IDENTIFIER.--PROJECT-NAME--Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -390,7 +400,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = __PROJECT_NAME__Tests/Info.plist;
+				DEVELOPMENT_TEAM = WZQCH4CE4Y;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AN.ORGANIZATION.IDENTIFIER.--PROJECT-NAME--Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
